@@ -1,11 +1,14 @@
 # Jon's Earbuds AR Object Site
 
 This is the website which shows my Earbuds as an AR object based on Model-viewer.
-It also provides Hotspot function to show additional information using Javascript array and object function.
+It also provides a Hotspot function to show additional information using a Javascript array and object function.
+
+![promotional_images_5](https://github.com/jonwyun/Yun_JongWoog_Earbuds_Repo/assets/113542871/cd7a915b-5e76-4ae3-8717-80de38886436)
+
 
 ## Installation
 
-No installation is needed for this site. HTMLs will work on any browsers.
+No installation is needed for this site. HTML will work on any browser.
 
 ## Contributing
 
