@@ -7,25 +7,25 @@
     const infoBoxes = [
       {
         title: "Noise-cancelling",
-        text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+        text: "Experience a new level of audio clarity with our cutting-edge noise cancelling earbuds. Designed to immerse you in your music, podcasts, and calls, our earbuds utilize advanced noise cancellation technology to block out ambient sounds, allowing you to focus on what matters most.",
         image: "../images/noise_cancel.png"
       },  
 
       {
         title: "Max 72hr Battery",
-        text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+        text: "Enjoy uninterrupted audio bliss with our earbuds boasting an impressive maximum battery life of 72 hours. Whether you're on a long-haul flight, a weekend getaway, or a marathon work session, these earbuds will keep pace. ",
         image: "../images/battery.png"
       },  
 
       {
         title: "2X Faster Chip",
-        text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+        text: "Our earphones have a cutting-edge 2X faster processor for lightning-fast performance. The flawless audio playback and quick response times provided by this potent processor result in a more immersive and comfortable listening experience.",
         image: "../images/2x_faster_chip.png"
       },
       
       {
         title: "Quick Charger",
-        text: "Noise-cancelling microphones and a rear copper shield are optimally placed to quickly detect outside noises, working together to counter noise before it disturbs your experience.",
+        text: "With our quick charger, you'll spend less time waiting and more time enjoying your favorite music. Designed for efficiency, this charger delivers swift and reliable power replenishment, ensuring your earbuds are always ready for action.",
         image: "../images/quick_charger.png"
       }
     ]
