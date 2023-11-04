@@ -49,3 +49,19 @@
           url('#{$file-path}.woff2') format('woff2')
       }
   }
+
+// box
+
+@mixin box($bg, $color, $radius, $width, $height) {
+      background-color: $bg;
+      color: $color;
+      border-radius: $radius;
+      width: $width;
+      height: $height;
+      padding: 20px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom:10px;
+}
+
+
