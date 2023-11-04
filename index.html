@@ -7,57 +7,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet"/>
 
-    <title>Earbuds AR Object</title>
+    <title>MetalPod Earbuds</title>
   </head>
   <body>
-    <h1 class="hidden">Jon's Earbuds AR Object</h1>
-    <model-viewer id="model" src="model/Yun_JongWoog_Earbuds_AR_hotspot.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="0.89" auto-rotate shadow-softness="1" exposure="1.26" environment-image="images/aircraft_workshop_01_1k.hdr" camera-orbit="-158.5deg 91.22deg 5.185m" field-of-view="30deg">
+    <h1>MetalPod</h1>
+    <div class="grid-con">
+        <div class="col-span-2" id="circle-left"></div>
+        <div class="col-span-2" id="circle-right"></div>
 
-        <button class="Hotspot" slot="hotspot-1" data-position="-0.8235116834527858m 0.4076749791130516m 0.9511997114506389m" data-normal="0.9807852898984398m 0m -0.19509027428048192m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation" id="hotspot-1">
-                <!-- <h2>3D Dolby Sound</h2>
-                <p>360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.</p> -->
+        <model-viewer id="model" src="model/Yun_JongWoog_Earbuds_AR_hotspot.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="0.89" auto-rotate shadow-softness="1" exposure="1.26" environment-image="images/aircraft_workshop_01_1k.hdr" camera-orbit="-158.5deg 91.22deg 5.185m" field-of-view="30deg">
+
+            <button class="Hotspot" slot="hotspot-1" data-position="-0.8235116834527858m 0.4076749791130516m 0.9511997114506389m" data-normal="0.9807852898984398m 0m -0.19509027428048192m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-1">
+                </div>
+            </button>
+
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.9844809795940865m 1.449989639222622m 1.0007458227889199m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-2">
+                </div>
+            </button>
+
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.9442045287954561m 1.1127897845900265m 0.49035417947477977m" data-normal="-0.17759755747143177m -0.21518864812495941m -0.9602879533235508m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-3">
+                </div>
+            </button>
+
+            <button class="Hotspot" slot="hotspot-4" data-position="-1.497030340135097m 0.943016967638692m 0.9669031526132934m" data-normal="-1m 0m -1.1102230246251565e-16m" data-visibility-attribute="visible">
+                <div class="HotspotAnnotation" id="hotspot-4">
+                </div>
+            </button>
+
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
             </div>
-        </button>
 
-        <button class="Hotspot" slot="hotspot-2" data-position="-0.9844809795940865m 1.449989639222622m 1.0007458227889199m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation" id="hotspot-2">
-                <!-- <h2>72 Hours Battery</h2>
-                <p>360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.</p> -->
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+
+            <div id="ar-prompt">
+                <img src="ar_hand_prompt.png">
             </div>
-        </button>
+        </model-viewer>
+    </div>  
 
-        <button class="Hotspot" slot="hotspot-3" data-position="-0.9442045287954561m 1.1127897845900265m 0.49035417947477977m" data-normal="-0.17759755747143177m -0.21518864812495941m -0.9602879533235508m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation" id="hotspot-3">
-                <!-- <h2>1TB Storage</h2>
-                <p>360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.</p> -->
-            </div>
-        </button>
-
-        <button class="Hotspot" slot="hotspot-4" data-position="-1.497030340135097m 0.943016967638692m 0.9669031526132934m" data-normal="-1m 0m -1.1102230246251565e-16m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation" id="hotspot-4">
-                <!-- <h2>4x Fast Charge</h2>
-                <p>360 Audio places sound all around you, while Dolby Head Tracking™ technology delivers an incredible three-dimensional listening experience.</p> -->
-            </div>
-        </button>
-
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
-
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-
-        <div id="ar-prompt">
-            <img src="ar_hand_prompt.png">
-        </div>
-
-    </model-viewer>  
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
   </body>

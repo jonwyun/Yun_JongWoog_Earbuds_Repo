@@ -4,8 +4,8 @@
 
   model-viewer {
     width: auto;
-    max-width: 1200px;
-    height: 700px;
+    max-width: 1920px;
+    height: 900px;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,0,0,1) 74%);
     margin: 0 auto;
@@ -59,7 +59,7 @@
     background: a.$first-color;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    color: a.$body-text-color;
+    color: a.$white;
     display: block;
     font-family: a.$font-family;
     font-size: 13px;
@@ -74,7 +74,7 @@
     text-align: left;
 
     p {
-      color: a.$body-text-color;
+      color: a.$white;
       line-height: 16px;
       font-weight: 300;
     }

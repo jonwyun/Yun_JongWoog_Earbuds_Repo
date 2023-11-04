@@ -1,7 +1,7 @@
 model-viewer {
   width: auto;
-  max-width: 1200px;
-  height: 700px;
+  max-width: 1920px;
+  height: 900px;
   background: rgb(63, 94, 251);
   background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(0, 0, 0) 74%);
   margin: 0 auto;
@@ -50,7 +50,7 @@ model-viewer {
   background: #FAD508;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: #000000;
+  color: #ffffff;
   display: block;
   font-family: "Ubuntu", sans-serif;
   font-size: 13px;
@@ -65,7 +65,7 @@ model-viewer {
   text-align: left;
 }
 .HotspotAnnotation p {
-  color: #000000;
+  color: #ffffff;
   line-height: 16px;
   font-weight: 300;
 }
@@ -197,6 +197,14 @@ model-viewer > #ar-prompt > img {
   }
 }
 html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
   height: 100%;
 }
 
@@ -205,8 +213,33 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+#circle-left, #circle-right {
+  background-color: #599BBA;
+  color: black;
+  border-radius: 50%;
+  width: 148px;
+  height: 148px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#circle-left {
+  justify-self: end;
 }/*# sourceMappingURL=main.css.map */
