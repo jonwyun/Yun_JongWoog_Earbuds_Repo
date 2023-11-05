@@ -14,46 +14,84 @@
     <title>MetalPod Earbuds</title>
   </head>
   <body>
-    <h1>MetalPod</h1>
-    <div class="grid-con">
-        <div class="col-span-2" id="circle-left"></div>
-        <div class="col-span-2" id="circle-right"></div>
 
+    <section class="grid-con">
+        <h1 class="col-span-full">MetalPod</h1>
+        <div class="col-span-2 m-col-span-6" id="circle-left"></div>
+        <div class="col-span-2 m-col-span-6" id="circle-right"></div>
+
+        <div class="col-span-full" id="sub-title">
+            <p id="sub-title-1">Art of Technology</p>
+            <p id="sub-title-2">Jewel on Your Ear</p>
+        </div>
+    </section>
+
+    <section class="grid-con">
+        <h2 class="hidden">Product Line</h2>
+        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-1-pic"></div>
+        <div class="col-span-full l-col-start-7 l-col-end-13" id="product-1-detail">
+            <p class="product-detail-title">Enim amet adipisicing laborum proident</p>
+            <p class="product-detail-sub">Enim amet adipisicing laborum proident deserunt in ut eu ad exercitation esse deserunt tempor occaecat.</p>
+        </div>
+
+        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-2-pic"></div>
+        <div class="col-span-full l-col-start-7 l-col-end-13" id="product-2-detail">
+            <p class="product-detail-title">Enim amet adipisicing laborum proident</p>
+            <p class="product-detail-sub">Enim amet adipisicing laborum proident deserunt in ut eu ad exercitation esse deserunt tempor occaecat.</p>
+        </div>
+    </section>
+
+    <p class="col-span-full" id="sub-title-3">Deeper Inside</p>
+
+    <section id="xray">
+        <h2 class="hidden">X-ray Image</h2>
+        <div id="mobile-tablet-view">
+            <div class="col-span-full" id="xray-1">X-Ray 1</div>
+            <div class="col-span-full" id="xray-2">X-Ray 2</div>
+        </div>
+        <div id="outerShell">
+            <div id="imageCon">
+                <!-- xray version -->
+                <div class="slideImage image-right"></div>
+                <!-- rendered version -->
+                <div class="slideImage image-left"></div>
+                <!-- drag bar -->
+                <div class="slideImage image-drag"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="ar">
+        <h2 class="hidden">AR Image</h2>
         <model-viewer id="model" src="model/Yun_JongWoog_Earbuds_AR_hotspot.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="0.89" auto-rotate shadow-softness="1" exposure="1.26" environment-image="images/aircraft_workshop_01_1k.hdr" camera-orbit="-158.5deg 91.22deg 5.185m" field-of-view="30deg">
-
             <button class="Hotspot" slot="hotspot-1" data-position="-0.8235116834527858m 0.4076749791130516m 0.9511997114506389m" data-normal="0.9807852898984398m 0m -0.19509027428048192m" data-visibility-attribute="visible">
                 <div class="HotspotAnnotation" id="hotspot-1">
                 </div>
             </button>
-
             <button class="Hotspot" slot="hotspot-2" data-position="-0.9844809795940865m 1.449989639222622m 1.0007458227889199m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
                 <div class="HotspotAnnotation" id="hotspot-2">
                 </div>
             </button>
-
             <button class="Hotspot" slot="hotspot-3" data-position="-0.9442045287954561m 1.1127897845900265m 0.49035417947477977m" data-normal="-0.17759755747143177m -0.21518864812495941m -0.9602879533235508m" data-visibility-attribute="visible">
                 <div class="HotspotAnnotation" id="hotspot-3">
                 </div>
             </button>
-
             <button class="Hotspot" slot="hotspot-4" data-position="-1.497030340135097m 0.943016967638692m 0.9669031526132934m" data-normal="-1m 0m -1.1102230246251565e-16m" data-visibility-attribute="visible">
                 <div class="HotspotAnnotation" id="hotspot-4">
                 </div>
             </button>
-
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
-
             <button slot="ar-button" id="ar-button">
                 View in your space
             </button>
-
             <div id="ar-prompt">
                 <img src="ar_hand_prompt.png">
             </div>
         </model-viewer>
-    </div>  
+    </section> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
