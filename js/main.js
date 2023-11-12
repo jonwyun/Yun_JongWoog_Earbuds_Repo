@@ -1,6 +1,43 @@
 (() => {
-    //console.log("IIFE Fired");
-    //variables
+    const canvas = document.querySelector("#earpod-vid");
+    const context = canvas.getContext("2d");
+    canvas.width = 1920;
+    canvas.height = 1080;
+    const frameCount = 727; // how many still frames do we have?
+    const images = []; // array to hold all of our images
+
+    const buds = {
+        frame: 0
+    }
+
+    for(let i = 0; i < frameCount; i++) { 
+        const img = new Image();
+        img.src = `images/img-seq/metalpod_${(i + 1).toString().padStart(5, '0')}.jpg`; 
+        images.push(img);
+    }
+
+    gsap.to(buds, {
+        frame: 727,
+        snap: "frame", 
+        scrollTrigger: {
+            trigger: "#earpod-vid",
+            pin: true,
+            scrub: 1, 
+            markers: false,
+            start: "top top"
+        },
+        onUpdate: render
+    })
+
+    images[0].addEventListener("onload", render);
+
+    function render() {
+        console.log(images[buds.frame]);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(images[buds.frame], 0, 0);
+    }
+    
+    // 3D Model-viewer
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot");
   
@@ -46,7 +83,6 @@
   
     //functions
     function modelLoaded() {
-      //console.log(hotspots);
       hotspots.forEach(hotspot => {
         hotspot.style.display = "block";
       });
@@ -66,9 +102,6 @@
         let image = document.createElement("img");
         image.src = infoBox.image;
   
-        // console.log(infoBox.title);
-        // console.log(infoBox.text);
-  
         selected.appendChild(title);
         selected.appendChild(text);
         selected.appendChild(image);
@@ -79,16 +112,11 @@
     loadInfo();
   
     function showInfo() {
-      //console.log(this.slot);
-      //console.log(`#${this.slot}`);
-      //since the slot value matches the id value I can use the slot value as a selector to get to the div I want.
       let selected = document.querySelector(`#${this.slot}`);
       gsap.to(selected, 1, { autoAlpha: 1 });
     }
   
     function hideInfo() {
-      //console.log(this.slot);
-      //console.log(`#${this.slot}`);
       let selected = document.querySelector(`#${this.slot}`);
       gsap.to(selected, 1, { autoAlpha: 0 });
     }
@@ -102,4 +130,4 @@
     });
   })();
   
-  // In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
+  

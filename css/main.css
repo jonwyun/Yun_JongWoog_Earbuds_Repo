@@ -220,33 +220,21 @@ body {
   display: none;
 }
 
-h1 {
-  text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-  margin-top: 45px;
-  margin-bottom: 45px;
+.hero {
+  height: 100vh;
 }
 
-#circle-left, #circle-right {
-  background-color: #599BBA;
-  color: #000000;
-  border-radius: 50%;
-  width: 148px;
-  height: 148px;
-  padding: 20px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55px;
+  color: #ffffff;
 }
 
-#circle-left {
-  justify-self: end;
-}
-
-#sub-title {
-  font-size: 35px;
-  text-align: center;
+#earpod-vid {
+  max-width: 100%;
 }
 
 #product-1-pic, #product-2-pic {
