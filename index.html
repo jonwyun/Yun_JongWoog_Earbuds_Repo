@@ -16,29 +16,73 @@
   <body>
 
     <section class="hero full-width-grid-con">
-        <h1 class="col-span-full" id="brand-name">MetalPod</h1>
-        <div class="col-span-full">
+        <h1 class="col-span-full" id="brand-name"><span>Metal</span>Pod</h1>
+        <div class="vid-con col-span-full">
             <canvas id="earpod-vid"></canvas>
-        </div>
+        </div>    
+    </section>
 
-        <!-- <div class="col-span-full" id="sub-title">
+    <!-- <div class="col-span-full" id="sub-title">
             <p id="sub-title-1">Art of Technology</p>
             <p id="sub-title-2">Jewel on Your Ear</p>
         </div> -->
-    </section>
 
-    <section class="grid-con">
+    <section class="full-width-grid-con">
         <h2 class="hidden">Product Line</h2>
-        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-1-pic"></div>
+        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-1-pic">
+            <img
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            srcset="
+            promotional_images_4_g2mld3_c_scale,w_300.jpg 300w,
+            promotional_images_4_g2mld3_c_scale,w_964.jpg 964w,
+            promotional_images_4_g2mld3_c_scale,w_1392.jpg 1392w,
+            promotional_images_4_g2mld3_c_scale,w_1757.jpg 1757w,
+            promotional_images_4_g2mld3_c_scale,w_1920.jpg 1920w"
+            src="promotional_images_4_g2mld3_c_scale,w_1920.jpg"
+            alt="product-image-1">
+        </div>
         <div class="col-span-full l-col-start-7 l-col-end-13" id="product-1-detail">
-            <p class="product-detail-title">Enim amet adipisicing laborum proident</p>
-            <p class="product-detail-sub">Enim amet adipisicing laborum proident deserunt in ut eu ad exercitation esse deserunt tempor occaecat.</p>
+            <p class="product-detail-title">Art of Technology</p>
+            <p class="product-detail-sub">Jewel on Your Ear</p>
         </div>
 
-        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-2-pic"></div>
+        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-2-pic">
+            <img
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            srcset="
+            promotional_images_1_ruvllv_c_scale,w_300.jpg 300w,
+            promotional_images_1_ruvllv_c_scale,w_725.jpg 725w,
+            promotional_images_1_ruvllv_c_scale,w_1022.jpg 1022w,
+            promotional_images_1_ruvllv_c_scale,w_1242.jpg 1242w,
+            promotional_images_1_ruvllv_c_scale,w_1452.jpg 1452w,
+            promotional_images_1_ruvllv_c_scale,w_1637.jpg 1637w,
+            promotional_images_1_ruvllv_c_scale,w_1795.jpg 1795w,
+            promotional_images_1_ruvllv_c_scale,w_1917.jpg 1917w,
+            promotional_images_1_ruvllv_c_scale,w_1920.jpg 1920w"
+            src="promotional_images_1_ruvllv_c_scale,w_1920.jpg"
+            alt="product-image-2">
+        </div>
         <div class="col-span-full l-col-start-7 l-col-end-13" id="product-2-detail">
-            <p class="product-detail-title">Enim amet adipisicing laborum proident</p>
-            <p class="product-detail-sub">Enim amet adipisicing laborum proident deserunt in ut eu ad exercitation esse deserunt tempor occaecat.</p>
+            <p class="product-detail-title">Wireless Convenience</p>
+            <p class="product-detail-sub">Greater freedom of movement</p>
+        </div>
+
+        <div class="col-span-full l-col-start-1 l-col-end-7" id="product-3-pic">
+            <img
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            srcset="
+            promotional_images_6_tjoau4_c_scale,w_300.jpg 300w,
+            promotional_images_6_tjoau4_c_scale,w_835.jpg 835w,
+            promotional_images_6_tjoau4_c_scale,w_1219.jpg 1219w,
+            promotional_images_6_tjoau4_c_scale,w_1538.jpg 1538w,
+            promotional_images_6_tjoau4_c_scale,w_1825.jpg 1825w,
+            promotional_images_6_tjoau4_c_scale,w_1920.jpg 1920w"
+            src="promotional_images_6_tjoau4_c_scale,w_1920.jpg"
+            alt="product-image-3">
+        </div>
+        <div class="col-span-full l-col-start-7 l-col-end-13" id="product-3-detail">
+            <p class="product-detail-title">Compact and Lightweight</p>
+            <p class="product-detail-sub">Crafted to be discreet and comfortable</p>
         </div>
     </section>
 
@@ -96,6 +140,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
   </body>

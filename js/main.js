@@ -1,10 +1,15 @@
 (() => {
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
     const canvas = document.querySelector("#earpod-vid");
     const context = canvas.getContext("2d");
     canvas.width = 1920;
     canvas.height = 1080;
-    const frameCount = 727; // how many still frames do we have?
-    const images = []; // array to hold all of our images
+    const frameCount = 727; 
+    // const framesToShowBeforeFade = 5;
+    const images = []; 
 
     const buds = {
         frame: 0
@@ -12,19 +17,20 @@
 
     for(let i = 0; i < frameCount; i++) { 
         const img = new Image();
-        img.src = `images/img-seq/metalpod_${(i + 1).toString().padStart(5, '0')}.jpg`; 
+        img.src = `images/metalpod_${(i + 1).toString().padStart(5, '0')}.jpg`; 
         images.push(img);
     }
 
     gsap.to(buds, {
-        frame: 727,
+        frame: 726,
         snap: "frame", 
         scrollTrigger: {
             trigger: "#earpod-vid",
-            pin: true,
+            pin: ".content",
             scrub: 1, 
-            markers: false,
-            start: "top top"
+            markers: true,
+            start: "top top",
+            end: "bottom top"
         },
         onUpdate: render
     })
@@ -36,7 +42,26 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.drawImage(images[buds.frame], 0, 0);
     }
+
+    // gsap.to("#brand-name", {
+    //   opacity: 0,
+    //   duration: 0.5,
+    //   delay: 0,  
+    //   scrollTrigger: {
+    //       trigger: "#earpod-vid",
+    //       start: "top top",  
+    //       end: () => `bottom -=${framesToShowBeforeFade * (frameCount - 1)}`, 
+    //       scrub: 1,
+    //       onUpdate: (self) => {
+    //         const frameIndex = Math.floor((self.progress * (frameCount - 1)) + 0.5);
+    //         if (frameIndex >= framesToShowBeforeFade) {
+    //               console.log("brand name disappeared");
+    //           }
+    //       },
+    //   },
+    // });
     
+
     // 3D Model-viewer
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot");

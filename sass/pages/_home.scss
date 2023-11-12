@@ -17,34 +17,41 @@ body {
 }
 
 .hero {
-    height: 100vh;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 55px;
-    color: a.$white;    
+    h1 {
+        padding-top: 80px;
+        // padding-bottom: 40px;
+        margin: 0;
+        text-align: center;
+        font-size: 45px;
+        color: a.$white;
+        background-color: a.$black;
+    }
+    span {
+        font-weight: 100;
+    }
 }
 
 #earpod-vid {
     max-width: 100%;
 }
 
-// #circle-left, #circle-right {
-//     @include a.box (a.$second-color, a.$black, 50%, 148px, 148px);
+// .vid-con {
+//     max-width: 100%;
+//     overflow: hidden;
+//     position: relative;
 // }
 
-// #circle-left {
-//     justify-self: end;
+// canvas {
+//     display: block;
+//     max-height: 600px;
+//     margin: 0 auto;
+//     width: auto; 
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
 // }
 
-// #sub-title {
-//     font-size: 35px;
-//     text-align: center;
-// }
+
 
 #product-1-pic, #product-2-pic {
     @include a.box (a.$second-color, a.$black, 0%, auto, 296px);
@@ -70,16 +77,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    h1 {
-        text-align: center;
-        font-size: 75px;
-        font-weight: bold;
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    
-    #circle-left, #circle-right {
-        @include a.box (a.$second-color, a.$black, 50%, 350px, 350px);
+    .hero {
+        h1 {
+            font-size: 75px;
+            padding-top: 100px;
+            // padding-bottom: 50px;
+        }
     }
 
     #product-1-pic, #product-2-pic {
@@ -97,18 +100,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    h1 {
-        text-align: center;
-        font-size: 125px;
-        font-weight: bold;
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
     
-    #circle-left, #circle-right {
-        @include a.box (a.$second-color, a.$black, 50%, 450px, 450px);
-    }
-
     #sub-title-2 {
         margin-bottom: 100px;
     }
@@ -146,4 +138,14 @@ body {
         margin: 0;
     }
     
+}
+
+@media screen and (min-width: 1920px) {
+
+        .hero {
+            h1 {
+                font-size: 125px;
+            }
+        }
+
 }

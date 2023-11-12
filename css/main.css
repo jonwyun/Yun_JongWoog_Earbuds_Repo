@@ -220,17 +220,16 @@ body {
   display: none;
 }
 
-.hero {
-  height: 100vh;
-}
-
 .hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 55px;
+  padding-top: 80px;
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
   color: #ffffff;
+  background-color: #000000;
+}
+.hero span {
+  font-weight: 100;
 }
 
 #earpod-vid {
@@ -277,23 +276,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
-    text-align: center;
+  .hero h1 {
     font-size: 75px;
-    font-weight: bold;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-  #circle-left, #circle-right {
-    background-color: #599BBA;
-    color: #000000;
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 100px;
   }
   #product-1-pic, #product-2-pic {
     background-color: #599BBA;
@@ -315,24 +300,6 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  h1 {
-    text-align: center;
-    font-size: 125px;
-    font-weight: bold;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-  #circle-left, #circle-right {
-    background-color: #599BBA;
-    color: #000000;
-    border-radius: 50%;
-    width: 450px;
-    height: 450px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
   #sub-title-2 {
     margin-bottom: 100px;
   }
@@ -386,5 +353,10 @@ body {
     margin-bottom: 10px;
     padding: 0;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero h1 {
+    font-size: 125px;
   }
 }/*# sourceMappingURL=main.css.map */
