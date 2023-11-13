@@ -82,6 +82,7 @@
 
     // X-Ray
 
+    //Mobile-tablet version
     const tl = gsap.timeline();
     tl.from("#xray-2", {xPercent: -100, opacity: 0.5})
   
@@ -96,6 +97,8 @@
       markers: false,
       anticipatePin: 1
     });
+
+    //Desktop version
   
     (function(){
       "use strict";
@@ -145,6 +148,23 @@
     //document.body.addEventListener('touchmove', onMove);
     
     })();
+
+    // Without drag-bar version In-complete
+    // const trackerElement = document.getElementById("imageCon");
+    // const topImage  =  document.getElementById("image-left");
+
+    // function trackMousePosition(theEvent) {
+    //   const trackerDOMRect = trackerElement.getBoundingClientRect();
+    //   console.log(trackerDOMRect.left);
+
+    //   let mousePointerPos;
+    //   mousePointerPos = theEvent.clientX - trackerDOMRect.left;
+    //   console.log(mousePointerPos);
+    //   let imageWrapperWidth =  mousePointerPos/10;
+    //   console.log(imageWrapperWidth + '%');
+    //   topImage.style.width = imageWrapperWidth + '%';
+    // };
+    // trackerElement.addEventListener('mousemove', trackMousePosition);
 
     // 3D Model-viewer
     const model = document.querySelector("#model");
