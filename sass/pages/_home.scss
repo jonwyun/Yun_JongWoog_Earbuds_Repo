@@ -10,6 +10,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: a.$font-family;
+    background-color: a.$black;
+    color: a.$white;
 }
 
 .hidden {
@@ -18,13 +20,10 @@ body {
 
 .hero {
     h1 {
-        padding-top: 80px;
-        // padding-bottom: 40px;
+        padding-top: 100px;
         margin: 0;
         text-align: center;
-        font-size: 45px;
-        color: a.$white;
-        background-color: a.$black;
+        font-size: 45px;       
     }
     span {
         font-weight: 100;
@@ -53,28 +52,61 @@ body {
 
 
 
-#product-1-pic, #product-2-pic {
-    @include a.box (a.$second-color, a.$black, 0%, auto, 296px);
-    margin-top: 35px;
-    margin-bottom: 35px;
+#product-1-pic, #product-2-pic, #product-3-pic {
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
-#product-1-detail, #product-2-detail {
-    margin: 20px 20px 20px 20px;
+#product-1-detail, #product-2-detail, #product-3-detail {
+    padding: 50px 0 50px 0;
     text-align: center;
+    margin: 0 auto;
+}
+
+.product-detail-title {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.product-detail-sub {
+    font-size: 18px;
+}
+
+.product-bx {
+    background-color: a.$black;
 }
 
 #sub-title-3 {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: a.$black;
+    margin: 0 auto;
+}
+
+#mobile-tablet-view {
+    position: relative;
+    width: 100%; 
+    height: 110vh;
 }
 
 #xray-1, #xray-2 {
-    @include a.box (a.$second-color, a.$black, 0%, auto, 349px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
+#xray-2 {
+    z-index: 1; 
+}
+
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -85,58 +117,14 @@ body {
         }
     }
 
-    #product-1-pic, #product-2-pic {
-        @include a.box (a.$second-color, a.$black, 0%, auto, 350px);
-        margin-top: 45px;
-        margin-bottom: 45px;
-    }
-    
-    #product-1-detail, #product-2-detail {
-        margin: 20px 20px 20px 20px;
-        text-align: center;
-        font-size: 25px;
-    }
 
 }
 
 @media screen and (min-width: 1200px) {
     
-    #sub-title-2 {
-        margin-bottom: 100px;
-    }
 
-    #product-1-pic, #product-2-pic {
-        @include a.box (a.$second-color, a.$black, 0%, auto, 480px);
-        padding: 0;
-        margin: 0;
-    }
-    
-    #product-1-detail, #product-2-detail {
-        @include a.box (a.$black, a.$white, 0%, auto, 480px);
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
 
-    .product-detail-title {
-        font-size: 35px;
-        margin: 30px auto;
-    }
 
-    .product-detail-sub {
-        font-size: 19px;
-        margin: 30px auto;
-    }
-
-    #mobile-tablet-view {
-        display: none;
-    }
-
-    #outerShell {
-        @include a.box (a.$second-color, a.$black, 0%, auto, 700px);
-        padding: 0;
-        margin: 0;
-    }
     
 }
 

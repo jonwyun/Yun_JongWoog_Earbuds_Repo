@@ -13,27 +13,27 @@
 
     const buds = {
         frame: 0
-    }
+    };
 
     for(let i = 0; i < frameCount; i++) { 
         const img = new Image();
         img.src = `images/metalpod_${(i + 1).toString().padStart(5, '0')}.jpg`; 
         images.push(img);
-    }
+    };
 
     gsap.to(buds, {
         frame: 726,
         snap: "frame", 
         scrollTrigger: {
-            trigger: "#earpod-vid",
-            pin: ".content",
+            trigger: ".vid-con",
+            pin: true,
             scrub: 1, 
-            markers: true,
+            markers: false,
             start: "top top",
             end: "bottom top"
         },
         onUpdate: render
-    })
+    });
 
     images[0].addEventListener("onload", render);
 
@@ -60,7 +60,91 @@
     //       },
     //   },
     // });
+
+    gsap.utils.toArray(".product-bx").forEach((productBx, i) => {
+      ScrollTrigger.create({
+        trigger: productBx,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        markers: false,
+        anticipatePin: 1
+      });
+    });
+
+    ScrollTrigger.create({
+      trigger: "#sub-title-3",
+      start: "top top",
+      pin: true,
+      markers: false,
+      pinSpacing: false,
+    });
+
+    // X-Ray
+
+    const tl = gsap.timeline();
+    tl.from("#xray-2", {xPercent: -100, opacity: 0.5})
+  
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: "#mobile-tablet-view",
+      start: "top top",
+      end: "bottom bottom-=50%",
+      scrub: true,
+      pin: true,
+      pinSpacing: false,
+      markers: false,
+      anticipatePin: 1
+    });
+  
+    (function(){
+      "use strict";
+  
+    var imageCon = document.querySelector('#imageCon'),
+        drag = document.querySelector('.image-drag'),
+        left = document.querySelector('.image-left'),
+        dragging = false,
+        min = 0,
+        max = imageCon.offsetWidth;
+        //The HTMLElement.offsetWidth read-only property returns the layout width of an element. 
     
+    function onDown() {
+      dragging = true;
+    }
+    
+    function onUp() {
+      dragging = false;
+    }
+    
+    function onMove(event) {
+      if(dragging===true) {
+        var x = event.clientX - imageCon.getBoundingClientRect().left;
+        //The MouseEvent.clientX read-only property provides the horizontal coordinate within the application's client area at which the event occurred
+        //The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+        //X-coordinate, relative to the viewport origin, of the left of the rectangle box. Read only
+        console.log(event.clientX);
+        console.log(imageCon.getBoundingClientRect().left);
+      //need logic to keep slider in box
+        if(x < min) { //if x less than 0
+          x = min;    //set x = 0
+        }
+      else if(x > max) { //otherwise if x is greater than 900
+          x = max-4; //set x to equal the max width minus 2 (width of slider)
+        }
+        drag.style.left = x + 'px';
+        left.style.width = x + 'px';
+      }
+    }
+    
+    drag.addEventListener('mousedown', onDown, false); 
+    //add listener to actual drag div, if user clicks on it
+    //drag.addEventListener('touchstart', onDown);
+    document.body.addEventListener('mouseup', onUp, false);
+    //document.body.addEventListener('mo', onUp);
+    document.body.addEventListener('mousemove', onMove, false);
+    //document.body.addEventListener('touchmove', onMove);
+    
+    })();
 
     // 3D Model-viewer
     const model = document.querySelector("#model");
@@ -69,25 +153,25 @@
     const infoBoxes = [
       {
         title: "Noise-cancelling",
-        text: "Experience a new level of audio clarity with our cutting-edge noise cancelling earbuds. Designed to immerse you in your music, podcasts, and calls, our earbuds utilize advanced noise cancellation technology to block out ambient sounds, allowing you to focus on what matters most.",
+        text: "Experience a new level of audio clarity with our cutting-edge noise cancelling earbuds.",
         image: "../images/noise_cancel.png"
       },  
 
       {
         title: "Max 72hr Battery",
-        text: "Enjoy uninterrupted audio bliss with our earbuds boasting an impressive maximum battery life of 72 hours. Whether you're on a long-haul flight, a weekend getaway, or a marathon work session, these earbuds will keep pace. ",
+        text: "Enjoy uninterrupted audio bliss with our earbuds boasting an impressive maximum battery life of 72 hours.",
         image: "../images/battery.png"
       },  
 
       {
         title: "2X Faster Chip",
-        text: "Our earphones have a cutting-edge 2X faster processor for lightning-fast performance. The flawless audio playback and quick response times provided by this potent processor result in a more immersive and comfortable listening experience.",
+        text: "Our earphones have a cutting-edge 2X faster processor for lightning-fast performance.",
         image: "../images/2x_faster_chip.png"
       },
       
       {
         title: "Quick Charger",
-        text: "With our quick charger, you'll spend less time waiting and more time enjoying your favorite music. Designed for efficiency, this charger delivers swift and reliable power replenishment, ensuring your earbuds are always ready for action.",
+        text: "With our quick charger, you'll spend less time waiting and more time enjoying your favorite music.",
         image: "../images/quick_charger.png"
       }
     ]
@@ -153,6 +237,7 @@
       hotspot.addEventListener("mouseover", showInfo);
       hotspot.addEventListener("mouseout", hideInfo);
     });
+
   })();
   
   
